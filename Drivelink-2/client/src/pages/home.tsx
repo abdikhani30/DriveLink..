@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { Car, ParkingCircle, Receipt, Wrench, Users } from "lucide-react";
 import { useLocation } from "wouter";
-import IOSCard from "@/components/ui/ios-card";
+import IOSCard from "../../components/ui/ios-card";
 import { Button } from "../../components/ui/button";
 import { useVehicle } from "@/contexts/vehicle-context";
 import VehicleSelector from "@/components/vehicle-selector";
