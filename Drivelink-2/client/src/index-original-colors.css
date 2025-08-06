@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(213, 49%, 58%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(213, 49%, 65%);
+  --muted-foreground: hsl(0, 0%, 90%);
+  --popover: hsl(213, 49%, 55%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(213, 49%, 20%);
+  --border: hsl(213, 49%, 70%);
+  --input: hsl(0, 0%, 100%);
+  --primary: hsl(213, 49%, 58%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(213, 49%, 65%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(213, 49%, 65%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(213, 49%, 58%);
+  --radius: 0.5rem;
+  
+  /* iOS-specific colors with blue theme */
+  --ios-blue: hsl(213, 49%, 58%);
+  --ios-blue-light: hsl(213, 49%, 65%);
+  --ios-blue-dark: hsl(213, 49%, 50%);
+  --ios-gray: hsl(220, 8%, 57%);
+  --ios-background: linear-gradient(135deg, hsl(213, 49%, 58%) 0%, hsl(213, 49%, 70%) 100%);
+  --ios-card: hsl(0, 0%, 100%);
+  --ios-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --ios-shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.1);
+}

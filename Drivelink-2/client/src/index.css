@@ -1,0 +1,137 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #3A5A40;
+  --beige-bg: #F5F3EB;
+  --off-white: #FAFAF8;
+  --text-dark: #1E1E1E;
+  --secondary-green: #7D9D7B;
+  --divider-grey: #E0E0E0;
+  
+  --background: 44 20% 93%;
+  --foreground: 0 0% 12%;
+  --muted: 116 16% 54%;
+  --muted-foreground: 0 0% 12%;
+  --popover: 72 50% 98%;
+  --popover-foreground: 0 0% 12%;
+  --card: 72 50% 98%;
+  --card-foreground: 0 0% 12%;
+  --border: 0 0% 88%;
+  --input: 72 50% 98%;
+  --primary: 133 23% 29%;
+  --primary-foreground: 72 50% 98%;
+  --secondary: 116 16% 54%;
+  --secondary-foreground: 72 50% 98%;
+  --accent: 116 16% 54%;
+  --accent-foreground: 72 50% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 133 23% 29%;
+  --radius: 0.5rem;
+  
+  /* Updated theme colors */
+  --ios-green: var(--primary-green);
+  --ios-green-light: var(--secondary-green);
+  --ios-green-dark: #2E4A34;
+  --ios-gray: hsl(220, 8%, 57%);
+  --ios-background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  --ios-card: var(--off-white);
+  --ios-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --ios-shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: var(--primary-green);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+}
+
+@layer utilities {
+  .ios-shadow {
+    box-shadow: var(--ios-shadow);
+  }
+  
+  .ios-shadow-lg {
+    box-shadow: var(--ios-shadow-lg);
+  }
+  
+  .tab-transition {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .ios-card {
+    @apply bg-white rounded-xl;
+    box-shadow: var(--ios-shadow);
+  }
+  
+  .ios-button {
+    background-color: var(--primary-green);
+    @apply text-white rounded-xl font-medium transition-all duration-200;
+  }
+  
+  .ios-button:hover {
+    background-color: var(--ios-green-dark);
+    @apply scale-105;
+  }
+  
+  .ios-button:active {
+    @apply scale-95;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .status-indicator {
+    @apply w-2 h-2 rounded-full;
+  }
+  
+  .status-available {
+    @apply bg-green-500;
+  }
+  
+  .status-limited {
+    @apply bg-yellow-500;
+  }
+  
+  .status-full {
+    @apply bg-red-500;
+  }
+}
